@@ -6,7 +6,7 @@ this is where each main class and method will be defined/explaination on the cod
 2. Our SmartHomeSystem
 3. LightControl
 4. ThermostatControl
-5. AutomationRule
+5. Automation
 
 ----------------------------------------------------------------------------------
 
