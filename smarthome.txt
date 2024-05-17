@@ -1,0 +1,13 @@
+Smart Home Automation System ~ CP317 Software Engineering ~ Group-ID-16
+
+this is where each main class and method will be defined/explaination on the code
+
+1. The User
+2. Our SmartHomeSystem
+3. LightControl
+4. ThermostatControl
+5. AutomationRule
+
+----------------------------------------------------------------------------------
+
+

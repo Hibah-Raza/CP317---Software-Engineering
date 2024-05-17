@@ -1,1 +1,0 @@
-//Smart Home Automation System ~ CP317 Software Engineering ~ Group-ID-Project\\
