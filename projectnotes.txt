@@ -1,0 +1,43 @@
+Smart Home Automation System ~ CP317 Software Engineering ~ Group-ID-16
+
+this is where each main class and method will be defined/explaination on the code
+
+1. The User
+2. Our SmartHomeSystem
+3. LightControl
+4. ThermostatControl
+5. Automation
+6. Main
+
+----------------------------------------------------------------------------------
+
+we have a total of 6 total classes
+
+the classes are:
+
+User
+
+Smart Home
+
+Light Control
+
+Thermostat Control
+
+Automation
+
+User Interface (Main)
+
+——————————————————————
+
+splitting work
+
+Hibah: User.java & Main.java
+
+Zach: Automation.java 
+
+Alianno: SmartHome.java
+
+Rafay: TemperatureControl.java
+
+Aarez: LightControl.java
+
