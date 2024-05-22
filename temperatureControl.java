@@ -1,10 +1,10 @@
 //for Abdul/Rafay to work on
 
-public class TemperatureControl 
+public class temperatureControl 
 {
     private int temperature;
 
-    public TemperatureControl() 
+    public temperatureControl() 
     {
         this.temperature = 20; // Default temperature
     }
