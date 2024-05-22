@@ -1,5 +1,9 @@
-//for Zach to work on
+// for Zach to work on
 
-/*public class AutomationRule{
-    
-}*/
+/*
+ * public class AutomationRule{
+ * 
+ * }
+ */
+
+// for testing commit purposes
