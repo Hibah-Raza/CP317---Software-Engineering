@@ -9,7 +9,7 @@ public class temperatureControl
         this.temperature = 20; // Default temperature
     }
 
-    public void temperatureControl(int temp) 
+    public void setTemperature(int temp) 
     {
         if (temp < 15 || temp > 30) 
         {
