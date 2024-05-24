@@ -1,5 +1,4 @@
 //for Alianno to work on
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +26,6 @@ public class SmartHome {
         this.temperatureControl = tempControl;
         // Add automation rule 
     }
-
     
     """
     -----------------------------------------------------------------------------
@@ -40,7 +38,6 @@ public class SmartHome {
     public void lightControl(boolean status) {
         this.lightControl.setLightStatus(status);
     }
-
 
     """
     -----------------------------------------------------------------------------
@@ -64,8 +61,6 @@ public class SmartHome {
     //   public void addAutomation {
 
     //   }
-
-
 }
 
 
