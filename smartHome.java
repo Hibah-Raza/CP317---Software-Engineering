@@ -5,14 +5,14 @@ import java.util.List;
 """
 -----------------------------------------------------------------------------
 - Placeholder description
-This class assigns preexisting lightControl, temperatureControl, and automationRule
+This class assigns preexisting lightControl, temperatureControl, and AutomationRule
 objects to a single smartHome
 -----------------------------------------------------------------------------
 """
 public class SmartHome {
-    LightControl lightControl = new LightControl();
-    temperatureControl tempControl = new temperatureControl();
-    // add automation
+    private LightControl lightControl = new LightControl();
+    private temperatureControl tempControl = new temperatureControl();
+    private List<AutomationRule> automationList;
 
     """
     -----------------------------------------------------------------------------
@@ -24,7 +24,7 @@ public class SmartHome {
     public SmartHome(LightControl lightControl, temperatureControl tempControl) {
         this.lightControl = lightControl;
         this.temperatureControl = tempControl;
-        // Add automation rule 
+        this.automationList = new ArrayList<>();
     }
     
     """
@@ -50,17 +50,29 @@ public class SmartHome {
         this.temperatureControl.setTemperature(temp );
     }
 
-    //   do in the morning
-    //   """ 
-    //   -----------------------------------------------------------------------------
-    
-    //   -----------------------------------------------------------------------------
-    //   parameters: 
-    //   -----------------------------------------------------------------------------
-    //   """
-    //   public void addAutomation {
 
-    //   }
+    
+
+
+    """ 
+    -----------------------------------------------------------------------------
+    Adds automations to an ArrayList of automations, the automations can decide to run on their own, 
+    this just organizes them together somewhere that the Smart Home can access them.
+    -----------------------------------------------------------------------------
+    parameters: rule - any automation that falls under the AutomationRule class or subclasses
+    -----------------------------------------------------------------------------
+    """
+    public void addAutomationRule (AutomationRule auto) {
+        automationList.add(auto);
+    }
+
+
+    // CHECK IF THIS WORKS
+    public void displayAutomationList () {
+        for (int i : this.automationList()) {
+            i.displayAutomation();
+        }
+    }
 }
 
 
