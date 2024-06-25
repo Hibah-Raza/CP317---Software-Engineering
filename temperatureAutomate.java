@@ -11,6 +11,7 @@ public class TemperatureAutomate extends AutomationRule{
         super.automationTime[1] = minute;
         super.automationTime[2] = 0;
         super.automationName = name;
+        super.active = true;
         this.temperature = temp;
         this.temperature_Control = tempCtrl;
     }

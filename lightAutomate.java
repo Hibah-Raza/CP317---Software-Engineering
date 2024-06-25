@@ -11,6 +11,7 @@ public class LightAutomate extends AutomationRule{
         super.automationTime[1] = minute;
         super.automationTime[2] = 0;
         super.automationName = name;
+        super.active = true;
         this.status = stat;
         this.lightControl = light;
     }

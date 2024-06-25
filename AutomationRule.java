@@ -18,24 +18,15 @@ public class AutomationRule {
     protected String automationName; // Stores the Automation name
     // Stores it in the superclass just because - maybe change this?
 
-    // UPDATE: MOVING THIS TO SMART HOME
-    /*public static int[] getCurrentTime(){
-        int currentTime[] = new int[3];
-        currentTime[0] = LocalTime.now().getHour();
-        currentTime[1] = LocalTime.now().getMinute();
-        currentTime[2] = 0;
-        return currentTime;
-    } 
-        
-    
-    
-    
-    //public void command();
-    public void command (AutomationRule auto){
-        if (automationTime  == getCurrentTime()) {
-            auto.runAutomation();
-        }
-    }*/
+    // Boolean that determines whether the automation is active and should be executed
+    public boolean active;
+
+
+    // Updates the active boolean to match the change value
+    public void updateActive(boolean change){
+        if (this.active != change)
+            this.active = change;
+    }
 
 
 
