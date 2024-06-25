@@ -1,5 +1,6 @@
 // Alianno
 
+
 public class TemperatureAutomate extends AutomationRule{
     private temperatureControl temperature_Control;
     private int temperature; // change all these to float later maybe?? ask the group members about changing to float
