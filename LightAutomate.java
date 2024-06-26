@@ -4,7 +4,6 @@
 public class LightAutomate extends AutomationRule{
     private LightControl lightControl;
     private boolean status;
-    //private float time;
 
     public LightAutomate(int hour, int minute, String name, boolean stat, LightControl light) {
         super.automationTime[0] = hour;

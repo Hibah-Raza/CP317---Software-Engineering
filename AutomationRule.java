@@ -1,8 +1,5 @@
 // for Alianno to work on
 
-import java.time.LocalTime;
-import java.util.Date;
-
 
 // maybe ask if i can add a "Turn Thermostat off" setting to the Thermostat, probably need to add private boolean status like light has
 
@@ -27,16 +24,6 @@ public class AutomationRule {
         if (this.active != change)
             this.active = change;
     }
-
-
-
-    //public void command();
-    public void command (AutomationRule auto){
-        if (automationTime  == SmartHome.getCurrentTime()) {
-            auto.runAutomation();
-        }
-    }
-
 
 
     public void runAutomation(){

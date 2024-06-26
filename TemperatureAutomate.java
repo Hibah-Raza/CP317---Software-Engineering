@@ -3,7 +3,7 @@
 
 public class TemperatureAutomate extends AutomationRule{
     private temperatureControl temperature_Control;
-    private int temperature; // change all these to float later maybe?? ask the group members about changing to float
+    private int temperature;
 
     
     public TemperatureAutomate(int hour, int minute, String name, int temp, temperatureControl tempCtrl) {
