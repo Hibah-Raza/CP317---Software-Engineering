@@ -19,10 +19,35 @@ public class AutomationRule {
     public boolean active;
 
 
+    public int[] getAutomationTime() {
+        return automationTime;
+    }
+
+
+    public void setAutomationTime(int hour, int minute) {
+        this.automationTime[0] = hour;
+        this.automationTime[1] = minute;
+        this.automationTime[2] = 0;
+    }
+
+
+    public String getAutomationName() {
+        return automationName;
+    }
+
+
+    public void setAutomationName(String automationName) {
+        this.automationName = automationName;
+    }
+
+
+    public boolean getActive() {
+        return active;
+    }
+
     // Updates the active boolean to match the change value
-    public void updateActive(boolean change){
-        if (this.active != change)
-            this.active = change;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
 
@@ -33,5 +58,6 @@ public class AutomationRule {
     public void displayAutomation(){
         // Remain empty, to be overridden by LightAutomate and TemperatureAutomate subclasses
     }
+
 
 }

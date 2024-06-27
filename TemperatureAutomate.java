@@ -29,5 +29,21 @@ public class TemperatureAutomate extends AutomationRule{
         System.out.println("Set Temperature to: " + this.temperature);
     }
 
+    public temperatureControl getTemperature_Control() {
+        return temperature_Control;
+    }
+
+    public void setTemperature_Control(temperatureControl temperature_Control) {
+        this.temperature_Control = temperature_Control;
+    }
+
+    public int getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
+
     //SmartHomeSystem()
 }

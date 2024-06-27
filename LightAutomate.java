@@ -29,5 +29,21 @@ public class LightAutomate extends AutomationRule{
         System.out.println("Set Light to: " + this.status);
     }
 
+    public LightControl getLightControl() {
+        return lightControl;
+    }
+
+    public void setLightControl(LightControl lightControl) {
+        this.lightControl = lightControl;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     //SmartHomeSystem()
 }
