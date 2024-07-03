@@ -1,11 +1,10 @@
 // Alianno
 
-
-public class LightAutomate extends AutomationRule{
-    private lightControl lightControl;
+public class LightAutomate extends AutomationRule {
+    private LightControl lightControl;
     private boolean status;
 
-    public LightAutomate(int hour, int minute, String name, boolean stat, lightControl light) {
+    public LightAutomate(int hour, int minute, String name, boolean stat, LightControl light) {
         super.automationTime[0] = hour;
         super.automationTime[1] = minute;
         super.automationTime[2] = 0;
@@ -16,24 +15,23 @@ public class LightAutomate extends AutomationRule{
     }
 
     @Override
-    public void runAutomation(){
+    public void runAutomation() {
         this.lightControl.setLightStatus(this.status);
     }
 
-
     @Override
-    public void displayAutomation(){
+    public void displayAutomation() {
         System.out.println("Automation Name: " + this.automationName);
         System.out.println("Automation Type: Light");
         System.out.println("Activation Time: " + this.automationTime[0] + ":" + this.automationTime[1]);
         System.out.println("Set Light to: " + this.status);
     }
 
-    public lightControl getLightControl() {
+    public LightControl getLightControl() {
         return lightControl;
     }
 
-    public void setLightControl(lightControl lightControl) {
+    public void setLightControl(LightControl lightControl) {
         this.lightControl = lightControl;
     }
 
@@ -45,5 +43,5 @@ public class LightAutomate extends AutomationRule{
         this.status = status;
     }
 
-    //SmartHomeSystem()
+    // SmartHomeSystem()
 }

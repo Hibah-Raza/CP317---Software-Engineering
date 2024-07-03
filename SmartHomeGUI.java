@@ -65,5 +65,7 @@ public class SmartHomeGUI {
 
         mainPanel.add(lightControlPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+
+        frame.setVisible(true);
     }
 }

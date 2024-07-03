@@ -8,13 +8,14 @@ and to check the current status of the lights.
 -----------------------------------------------------------------------------
 */
 
-public class lightControl {
+public class LightControl {
     private boolean status;
-    
+
     public void setLightStatus(boolean status) {
-        this.status = status; 
+        this.status = status;
         System.out.println("Light is now " + (status ? "ON" : "OFF"));
     }
+
     public boolean getLightStatus() {
         return status;
     }

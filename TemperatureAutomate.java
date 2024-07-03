@@ -1,12 +1,10 @@
 // Alianno
 
-
-public class TemperatureAutomate extends AutomationRule{
-    private temperatureControl temperature_Control;
+public class TemperatureAutomate extends AutomationRule {
+    private TemperatureControl temperature_Control;
     private int temperature;
 
-    
-    public TemperatureAutomate(int hour, int minute, String name, int temp, temperatureControl tempCtrl) {
+    public TemperatureAutomate(int hour, int minute, String name, int temp, TemperatureControl tempCtrl) {
         super.automationTime[0] = hour;
         super.automationTime[1] = minute;
         super.automationTime[2] = 0;
@@ -22,18 +20,18 @@ public class TemperatureAutomate extends AutomationRule{
     }
 
     @Override
-    public void displayAutomation(){
+    public void displayAutomation() {
         System.out.println("Automation Name: " + this.automationName);
         System.out.println("Automation Type: Temperature");
         System.out.println("Activation Time: " + this.automationTime[0] + ":" + this.automationTime[1]);
         System.out.println("Set Temperature to: " + this.temperature);
     }
 
-    public temperatureControl getTemperature_Control() {
+    public TemperatureControl getTemperature_Control() {
         return temperature_Control;
     }
 
-    public void setTemperature_Control(temperatureControl temperature_Control) {
+    public void setTemperature_Control(TemperatureControl temperature_Control) {
         this.temperature_Control = temperature_Control;
     }
 
@@ -45,5 +43,5 @@ public class TemperatureAutomate extends AutomationRule{
         this.temperature = temperature;
     }
 
-    //SmartHomeSystem()
+    // SmartHomeSystem()
 }
