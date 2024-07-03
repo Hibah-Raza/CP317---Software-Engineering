@@ -16,7 +16,7 @@ objects to a single smartHome
 -----------------------------------------------------------------------------
 */
 public class SmartHome {
-    private LightControl lightControl;
+    private lightControl lightControl;
     private temperatureControl temperature_Control;
     Date delayStart;
     public static int[] currentTime = getCurrentTime();
@@ -64,7 +64,7 @@ public class SmartHome {
     parameters: lightControl, temperatureControl
     -----------------------------------------------------------------------------
     */
-    public SmartHome(LightControl lightCtrl, temperatureControl temperatureCtrl, Date initialDate) {
+    public SmartHome(lightControl lightCtrl, temperatureControl temperatureCtrl, Date initialDate) {
         this.lightControl = lightCtrl;
         this.temperature_Control = temperatureCtrl;
         // I think because Smart Home doesnt directly interact with the computer (only Main does), it won't let me use all of the

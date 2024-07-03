@@ -8,7 +8,7 @@ and to check the current status of the lights.
 -----------------------------------------------------------------------------
 */
 
-public class LightControl {
+public class lightControl {
     private boolean status;
     
     public void setLightStatus(boolean status) {
