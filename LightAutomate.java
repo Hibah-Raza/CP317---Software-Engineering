@@ -2,10 +2,10 @@
 
 
 public class LightAutomate extends AutomationRule{
-    private LightControl lightControl;
+    private lightControl lightControl;
     private boolean status;
 
-    public LightAutomate(int hour, int minute, String name, boolean stat, LightControl light) {
+    public LightAutomate(int hour, int minute, String name, boolean stat, lightControl light) {
         super.automationTime[0] = hour;
         super.automationTime[1] = minute;
         super.automationTime[2] = 0;
@@ -29,11 +29,11 @@ public class LightAutomate extends AutomationRule{
         System.out.println("Set Light to: " + this.status);
     }
 
-    public LightControl getLightControl() {
+    public lightControl getLightControl() {
         return lightControl;
     }
 
-    public void setLightControl(LightControl lightControl) {
+    public void setLightControl(lightControl lightControl) {
         this.lightControl = lightControl;
     }
 
