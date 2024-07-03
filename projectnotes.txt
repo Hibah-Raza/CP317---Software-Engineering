@@ -27,7 +27,7 @@ Automation
 
 User Interface (Main)
 
-——————————————————————
+—————————————————————————————————————————————————————————————————————————————————
 
 splitting work
 
@@ -40,4 +40,34 @@ Alianno: SmartHome.java
 Rafay: TemperatureControl.java
 
 Aarez: LightControl.java
+
+------------------------------Final Project Classes & Work Split-------------------------------
+
+what we ended up doing,
+
+Hibah - User & Some of Main
+Zach - Interface - GUI and Main
+Alianno - Automation for light and tmperature
+Rafay - Temperature Control
+Aarez - Light Control
+
+—————————————————————————————————————————————————————————————————————————————————
+
+classes we have now = total of 9
+
+User.java
+
+SmartHome.java
+
+SmartHomeGUI.java
+
+lightControl.java
+
+temperatureControl.java
+
+AutomationRule.java
+ - TemperatureAutomate.java
+ - LightAutomate.java
+
+ Main.java
 
