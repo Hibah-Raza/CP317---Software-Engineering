@@ -1,8 +1,8 @@
 ## Smart Home Automation System Interface
 
-#### CP317 Software Engineering ~ Group 16
+#### CP317 ~ Software Engineering ~ Group 16
 
-## Getting Started
+## Getting Started:
 
 To run Main.java file in Visual Studio Code on MacOS follow the following steps:
 
