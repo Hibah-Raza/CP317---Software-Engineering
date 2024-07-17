@@ -31,8 +31,19 @@ To run Main.java file in Visual Studio Code on MacOS follow the following steps:
 javac Main.java
 
 # Run
-java Main```
+java Main
+```
 
-Citations:
+**Citations**:
 
+1. Getting Started with Java in Visual Studio Code. https://code.visualstudio.com/docs/java/java-tutorial.
 
+2. Set proper path on Visual studio Code for Java on M1 MacBook Pro. https://stackoverflow.com/questions/67977429/set-proper-path-on-visual-studio-code-for-java-on-m1-macbook-pro.
+
+3. Visual studio code - Compiling Java into application in VSCode on Mac .... https://stackoverflow.com/questions/58417800/compiling-java-into-application-in-vscode-on-mac.
+
+4. How to Run Java in Visual Studio Code on Mac OS 2022. https://www.youtube.com/watch?v=hEJp98x_MPQ.
+
+5. How to Set Up Java Development in Visual Studio Code on Mac | VSCode Java Development Basics (MacOS). https://www.youtube.com/watch?v=qTaZO_Ou7Zo.
+
+6. How to Install & Run Java in Visual Studio Code (Under 5 minutes) {2024}. https://www.youtube.com/watch?v=fbyobdxDQno.
