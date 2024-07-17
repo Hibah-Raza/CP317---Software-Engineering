@@ -14,3 +14,25 @@ To run Main.java file in Visual Studio Code on MacOS follow the following steps:
 
 2. **Install a Java Development Kit (JDK)**:
 
+- To use Java within Visual Studio Code, you need to have a Java Development Kit (JDK) instaled on your local enviornment.
+
+- [Choose a JDK from sources like Amazon Correto, Azul Zulu, Eclipse, Adoptium's Temurin, IBM Semeru, Runtimes, Microsoft Build of OpenJDK, or Oracale Java SE⁴.](https://code.visualstudio.com/docs/java/java-tutorial)
+
+- Make sure you have JDK properly configured
+
+3. **Run Your Java Code**:
+
+- You can use the intergrated terminal in VS Code to compile and run your code.
+
+- For example, to compile and run a Java program, use the following commands in the terminal:
+
+```bash
+# Compile
+javac Main.java
+
+# Run
+java Main```
+
+Citations:
+
+
