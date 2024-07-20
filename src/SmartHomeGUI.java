@@ -103,6 +103,18 @@ public class SmartHomeGUI {
         lightAutomationPanel.setLayout(new BoxLayout(lightAutomationPanel, BoxLayout.Y_AXIS));
         lightAutomationPanel.setBorder(BorderFactory.createTitledBorder("Light Automation"));
 
+        /*
+         * Create Light Automation input fields
+         */
+        JPanel lightTimePanel = new JPanel(new FlowLayout());
+        JTextField lightHourField = new JTextField(2);
+        JTextField lightMinuteField = new JTextField(2);
+        lightTimePanel.add(new JLabel("Hour:"));
+        lightTimePanel.add(lightHourField);
+        lightTimePanel.add(new JLabel("Minute:"));
+        lightTimePanel.add(lightMinuteField);
+        lightAutomationPanel.add(lightTimePanel);
+
         frame.setVisible(true);
     }
 }
