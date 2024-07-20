@@ -172,6 +172,27 @@ public class SmartHomeGUI {
         tempAutomationSlider.setPaintLabels(true);
         tempAutomationPanel.add(tempAutomationSlider);
 
+        /*
+         * Create Temperature Automation confirmation button
+         */
+        JButton saveTempAutomationButton = new JButton("Save Temperature Automation");
+        saveTempAutomationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        saveTempAutomationButton.addActionListener(e -> {
+            int hour = Integer.parseInt(tempHourField.getText());
+            int minute = Integer.parseInt(tempMinuteField.getText());
+            int temperature = tempAutomationSlider.getValue();
+            user.getSmartHome().createAutomation(hour, minute, "Temperature Automation", temperature,
+                    user.getSmartHome().getTemperatureControl());
+            confirmationLabel.setText("Temperature automation set for " + hour + ":" + minute + " with temperature "
+                    + temperature + " degrees.");
+            System.out.println("Temperature automation confirmed for " + hour + ":" + minute + " with temperature "
+                    + temperature + " degrees.");
+        });
+        tempAutomationPanel.add(saveTempAutomationButton);
+
+        mainPanel.add(tempAutomationPanel);
+        mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+
         frame.setVisible(true);
     }
 }
