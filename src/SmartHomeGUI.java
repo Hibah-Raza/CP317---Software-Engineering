@@ -208,6 +208,25 @@ public class SmartHomeGUI {
         JScrollPane scrollPane = new JScrollPane(automationListArea);
         displayPanel.add(scrollPane);
 
+        /*
+         * Create Refresh Automation List button
+         */
+        JButton refreshAutomationListButton = new JButton("Refresh Automation List");
+        refreshAutomationListButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        refreshAutomationListButton.addActionListener(e -> {
+            automationListArea.setText("");
+            List<AutomationRule> automationList = user.getSmartHome().getAutomationList();
+            for (AutomationRule rule : automationList) {
+                int[] time = rule.getAutomationTime();
+                String timeString = String.format("%02d:%02d", time[0], time[1]);
+                automationListArea.append(timeString + " - " + rule.getAutomationName() + "\n");
+            }
+            confirmationLabel.setText("Automation list refreshed");
+        });
+        displayPanel.add(refreshAutomationListButton);
+
+        mainPanel.add(displayPanel);
+
         frame.setVisible(true);
     }
 }
