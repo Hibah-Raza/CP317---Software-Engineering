@@ -122,6 +122,27 @@ public class SmartHomeGUI {
         lightStatusCheckbox.setAlignmentX(Component.CENTER_ALIGNMENT);
         lightAutomationPanel.add(lightStatusCheckbox);
 
+        /*
+         * Create Light Automation confirmation button
+         */
+        JButton saveLightAutomationButton = new JButton("Save Light Automation");
+        saveLightAutomationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        saveLightAutomationButton.addActionListener(e -> {
+            int hour = Integer.parseInt(lightHourField.getText());
+            int minute = Integer.parseInt(lightMinuteField.getText());
+            boolean status = lightStatusCheckbox.isSelected();
+            user.getSmartHome().createAutomation(hour, minute, "Light Automation", status,
+                    user.getSmartHome().getLightControl());
+            confirmationLabel.setText("Light automation confirmed for " + hour + ":" + minute + " with status "
+                    + (status ? "ON" : "OFF"));
+            System.out.println("Light automation confirmed for " + hour + ":" + minute + " with status "
+                    + (status ? "ON" : "OFF"));
+        });
+        lightAutomationPanel.add(saveLightAutomationButton);
+
+        mainPanel.add(lightAutomationPanel);
+        mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+
         frame.setVisible(true);
     }
 }
