@@ -66,6 +66,36 @@ public class SmartHomeGUI {
         mainPanel.add(lightControlPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 
+        /*
+         * Create Temperature Control panel
+         */
+        JPanel temperatureControlPanel = new JPanel();
+        temperatureControlPanel.setLayout(new BoxLayout(temperatureControlPanel, BoxLayout.Y_AXIS));
+        temperatureControlPanel.setBorder(BorderFactory.createTitledBorder("Temperature Control"));
+
+        JLabel tempLabel = new JLabel("Set Temperature:");
+        tempLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        temperatureControlPanel.add(tempLabel);
+
+        JSlider temperatureSlider = new JSlider(JSlider.HORIZONTAL, 15, 30, 20);
+        temperatureSlider.setMajorTickSpacing(5);
+        temperatureSlider.setMinorTickSpacing(1);
+        temperatureSlider.setPaintTicks(true);
+        temperatureSlider.setPaintLabels(true);
+        temperatureControlPanel.add(temperatureSlider);
+
+        JButton setTempButton = new JButton("Confirm Tempature");
+        setTempButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        setTempButton.addActionListener(e -> {
+            int temperature = temperatureSlider.getValue();
+            user.temperatureControl(temperature);
+            confirmationLabel.setText("Temperature set to " + temperature + " degrees");
+        });
+        temperatureControlPanel.add(setTempButton);
+
+        mainPanel.add(temperatureControlPanel);
+        mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+
         frame.setVisible(true);
     }
 }
