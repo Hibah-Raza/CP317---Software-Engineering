@@ -150,6 +150,18 @@ public class SmartHomeGUI {
         tempAutomationPanel.setLayout(new BoxLayout(tempAutomationPanel, BoxLayout.Y_AXIS));
         tempAutomationPanel.setBorder(BorderFactory.createTitledBorder("Temperature Automation"));
 
+        /*
+         * Create Temperature Automation input fields
+         */
+        JPanel tempTimePanel = new JPanel(new FlowLayout());
+        JTextField tempHourField = new JTextField(2);
+        JTextField tempMinuteField = new JTextField(2);
+        tempTimePanel.add(new JLabel("Hour:"));
+        tempTimePanel.add(tempHourField);
+        tempTimePanel.add(new JLabel("Minute:"));
+        tempTimePanel.add(tempMinuteField);
+        tempAutomationPanel.add(tempTimePanel);
+
         frame.setVisible(true);
     }
 }
