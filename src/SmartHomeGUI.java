@@ -96,6 +96,13 @@ public class SmartHomeGUI {
         mainPanel.add(temperatureControlPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 
+        /*
+         * Create Light Automation panel
+         */
+        JPanel lightAutomationPanel = new JPanel();
+        lightAutomationPanel.setLayout(new BoxLayout(lightAutomationPanel, BoxLayout.Y_AXIS));
+        lightAutomationPanel.setBorder(BorderFactory.createTitledBorder("Light Automation"));
+
         frame.setVisible(true);
     }
 }
