@@ -200,6 +200,14 @@ public class SmartHomeGUI {
         displayPanel.setLayout(new BoxLayout(displayPanel, BoxLayout.Y_AXIS));
         displayPanel.setBorder(BorderFactory.createTitledBorder("Automation List"));
 
+        /*
+         * Add features to the list panel
+         */
+        JTextArea automationListArea = new JTextArea(10, 30);
+        automationListArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(automationListArea);
+        displayPanel.add(scrollPane);
+
         frame.setVisible(true);
     }
 }
