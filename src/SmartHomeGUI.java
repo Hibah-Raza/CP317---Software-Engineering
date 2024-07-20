@@ -162,6 +162,16 @@ public class SmartHomeGUI {
         tempTimePanel.add(tempMinuteField);
         tempAutomationPanel.add(tempTimePanel);
 
+        /*
+         * Create Temperature Automation slider
+         */
+        JSlider tempAutomationSlider = new JSlider(JSlider.HORIZONTAL, 15, 30, 20);
+        tempAutomationSlider.setMajorTickSpacing(5);
+        tempAutomationSlider.setMinorTickSpacing(1);
+        tempAutomationSlider.setPaintTicks(true);
+        tempAutomationSlider.setPaintLabels(true);
+        tempAutomationPanel.add(tempAutomationSlider);
+
         frame.setVisible(true);
     }
 }
