@@ -193,6 +193,13 @@ public class SmartHomeGUI {
         mainPanel.add(tempAutomationPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 
+        /*
+         * Create Display Automation List panel
+         */
+        JPanel displayPanel = new JPanel();
+        displayPanel.setLayout(new BoxLayout(displayPanel, BoxLayout.Y_AXIS));
+        displayPanel.setBorder(BorderFactory.createTitledBorder("Automation List"));
+
         frame.setVisible(true);
     }
 }
