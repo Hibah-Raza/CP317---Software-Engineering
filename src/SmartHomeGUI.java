@@ -115,6 +115,13 @@ public class SmartHomeGUI {
         lightTimePanel.add(lightMinuteField);
         lightAutomationPanel.add(lightTimePanel);
 
+        /*
+         * Create Light Automation light status checkbox
+         */
+        JCheckBox lightStatusCheckbox = new JCheckBox("Light On");
+        lightStatusCheckbox.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lightAutomationPanel.add(lightStatusCheckbox);
+
         frame.setVisible(true);
     }
 }
