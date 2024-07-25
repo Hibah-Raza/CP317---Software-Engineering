@@ -196,6 +196,7 @@ public class SmartHomeGUI {
                 System.out.println("Invalid automation time inputted");
             }
         });
+        tempAutomationPanel.add(saveTempAutomationButton);
 
         mainPanel.add(tempAutomationPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
