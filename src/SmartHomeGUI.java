@@ -131,12 +131,16 @@ public class SmartHomeGUI {
             int hour = Integer.parseInt(lightHourField.getText());
             int minute = Integer.parseInt(lightMinuteField.getText());
             boolean status = lightStatusCheckbox.isSelected();
-            user.getSmartHome().createAutomation(hour, minute, "Light Automation", status,
-                    user.getSmartHome().getLightControl());
-            confirmationLabel.setText("Light automation confirmed for " + hour + ":" + minute + " with status "
-                    + (status ? "ON" : "OFF"));
-            System.out.println("Light automation confirmed for " + hour + ":" + minute + " with status "
-                    + (status ? "ON" : "OFF"));
+            if ((hour > 0 && hour < 24) && (minute > 0 && minute < 60)) {
+                user.getSmartHome().createAutomation(hour, minute, "Light Automation", status,
+                        user.getSmartHome().getLightControl());
+                confirmationLabel.setText("Light automation confirmed for " + hour + ":" + minute + " with status "
+                        + (status ? "ON" : "OFF"));
+                System.out.println("Light automation confirmed for " + hour + ":" + minute + " with status "
+                        + (status ? "ON" : "OFF"));
+            } else {
+                System.out.println("Invalid automation time inputted");
+            }
         });
         lightAutomationPanel.add(saveLightAutomationButton);
 
@@ -181,14 +185,17 @@ public class SmartHomeGUI {
             int hour = Integer.parseInt(tempHourField.getText());
             int minute = Integer.parseInt(tempMinuteField.getText());
             int temperature = tempAutomationSlider.getValue();
-            user.getSmartHome().createAutomation(hour, minute, "Temperature Automation", temperature,
-                    user.getSmartHome().getTemperatureControl());
-            confirmationLabel.setText("Temperature automation set for " + hour + ":" + minute + " with temperature "
-                    + temperature + " degrees.");
-            System.out.println("Temperature automation confirmed for " + hour + ":" + minute + " with temperature "
-                    + temperature + " degrees.");
+            if ((hour > 0 && hour < 24) && (minute > 0 && minute < 60)) {
+                user.getSmartHome().createAutomation(hour, minute, "Temperature Automation", temperature,
+                        user.getSmartHome().getTemperatureControl());
+                confirmationLabel.setText("Temperature automation set for " + hour + ":" + minute + " with temperature "
+                        + temperature + " degrees.");
+                System.out.println("Temperature automation confirmed for " + hour + ":" + minute + " with temperature "
+                        + temperature + " degrees.");
+            } else {
+                System.out.println("Invalid automation time inputted");
+            }
         });
-        tempAutomationPanel.add(saveTempAutomationButton);
 
         mainPanel.add(tempAutomationPanel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
