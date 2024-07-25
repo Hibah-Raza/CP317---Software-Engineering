@@ -34,12 +34,11 @@ public class SmartHome {
 
             // Test - Will the code update on its own (yes)
             // System.out.println(currentTime[0] + ":" + currentTime[1]);
-            for (AutomationRule j : automationList) {
-                // If the automation is turned on, and if the automation is set to activate at
-                // the current time, then run the automation
-                if (j.getActive() == true && j.getAutomationTime()[0] == currentTime[0]
-                        && j.getAutomationTime()[1] == currentTime[1]) {
-                    j.runAutomation();
+            for (AutomationRule rule : automationList) {
+                // If the automation is set to activate at the current time, then run the automation
+                if (rule.getAutomationTime()[0] == currentTime[0]
+                        && rule.getAutomationTime()[1] == currentTime[1]) {
+                    rule.runAutomation();
                 }
             }
             // System.out.println("Automation is Running (TEST)");
@@ -121,34 +120,9 @@ public class SmartHome {
         this.automationList.add(auto);
     }
 
-    // CHECK IF THIS WORKS - IT DOES
-    public void displayAutomationList() {
-        int count = 1;
-        for (AutomationRule i : this.automationList) {
-            System.out.println(count + ":");
-            i.displayAutomation();
-            System.out.println();
-        }
-    }
-
-    // Accesses an index in the automation list - returns the index if the index is
-    // in the automation list
-    public AutomationRule accessListIndex(int index) {
-        if (index >= 0 && index < this.automationList.size())
-            return this.automationList.get(index);
-        // FIGURE OUT WHAT TO DO IF SOMEHOW PASSED AN INDEX THAT ISNT IN THE LIST
-        return null;
-    }
-
-    // Delete automation from list, and remove the reference to it
-    public void deleteAutomation(AutomationRule rule) {
-        this.automationList.remove(rule);
-        rule = null;
-    }
-
     // POLYMORPHISM - Creates LightAutomation and adds it to the automation List
-    public void createAutomation(int hour, int minute, String name, boolean stat, LightControl light) {
-        LightAutomate newLightAutomation = new LightAutomate(hour, minute, name, stat, light);
+    public void createAutomation(int hour, int minute, String name, boolean stat, LightControl lightCtrl) {
+        LightAutomate newLightAutomation = new LightAutomate(hour, minute, name, stat, lightCtrl);
         addAutomationRule(newLightAutomation);
     }
 
@@ -157,31 +131,6 @@ public class SmartHome {
     public void createAutomation(int hour, int minute, String name, int temp, TemperatureControl tempCtrl) {
         TemperatureAutomate newTemperatureAutomation = new TemperatureAutomate(hour, minute, name, temp, tempCtrl);
         addAutomationRule(newTemperatureAutomation);
-    }
-
-    // edit automation
-    // Note - Doesn't include changing the active status
-    // POLYMORPHISM - edit LightAutomation and adds it to the automation List
-    public void editAutomationProperties(LightAutomate lAuto, int hour, int minute, String name, boolean stat,
-            LightControl light) {
-        lAuto.setAutomationTime(hour, minute);
-        lAuto.setAutomationName(name);
-        lAuto.setStatus(stat);
-        lAuto.setLightControl(light);
-    }
-
-    // POLYMORPHISM - edit Thermostat Automation and adds it to the automation list
-    public void editAutomationProperties(TemperatureAutomate tAuto, int hour, int minute, String name, int temp,
-            TemperatureControl tempCtrl) {
-        tAuto.setAutomationTime(hour, minute);
-        tAuto.setAutomationName(name);
-        tAuto.setTemperature(temp);
-        tAuto.setTemperature_Control(tempCtrl);
-    }
-
-    // Edit the active status of the automation
-    public void editActive(AutomationRule rule, boolean active) {
-        rule.setActive(active);
     }
 
     public LightControl getLightControl() {
