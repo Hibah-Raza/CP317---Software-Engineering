@@ -1,5 +1,3 @@
-//for Aarez to work on (yay ^.^)
-
 /*
 -----------------------------------------------------------------------------
 This class represents the Light Control System in the Smart Home Automation

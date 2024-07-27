@@ -1,5 +1,3 @@
-//for Abdul/Rafay to work on
-
 // This is the class definition for the temperature control system
 public class TemperatureControl {
     // This is a private instance variable to store the current temperature
