@@ -7,7 +7,7 @@
  * <p> int[3] <code>automationTime</code>, which stores the Hour, Minute, and Second that an automation is set go off at.
  * 
  * <p> There is no constructor for the AutomationRule class, as it is solely meant to be extended by its subclasses.
- * <p> The AutomationRule defines 2 methods to return its attributers, and defines the runAutomation() method, with
+ * <p> The AutomationRule defines 2 methods to return its attributers, and defines the <code>runAutomation()</code> method, with
  * the implementation being performed by its subclasses.
  * @author Alianno Tulloch
  */
